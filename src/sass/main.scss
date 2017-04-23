@@ -1,7 +1,19 @@
+<<<<<<< remotes/origin/max
 .heading {
 	color: green;
 }
 
 body {
 	background: green;
+=======
+@import "vars";
+@import "mixins";
+@import "for_loop";
+@import "nesting";
+
+body {
+
+background: green;
+
+>>>>>>> local
 }
