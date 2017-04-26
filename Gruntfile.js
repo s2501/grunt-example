@@ -175,7 +175,7 @@ module.exports = function (grunt) {
     grunt.registerTask('default', [
         'clean:dev',
         'copy:dev',
-        'less:dev',
+        // 'less:dev',
         'sass:dev',
         'processhtml:dev',
         'connect',
@@ -184,7 +184,7 @@ module.exports = function (grunt) {
     grunt.registerTask('dist', [
         'clean:dist',
         'copy:dist',
-        'less:dist',
+        // 'less:dist',
         'sass:dist',
         'processhtml:dist',
         'htmlmin:dist',
