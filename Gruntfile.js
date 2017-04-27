@@ -32,7 +32,7 @@ module.exports = function (grunt) {
                     style: 'expanded'
                 },
                     files: {
-                    'dev/css/bootstrap.css': 'src/sass/bootstrap.scss'       // 'destination': 'source'
+                    'dev/css/bootstrap.css': 'src/sass/bootstrap.scss'      // 'destination': 'source'
                 }
             },
             dist: {

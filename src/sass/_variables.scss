@@ -92,7 +92,7 @@
 // Grayscale and brand colors for use across Bootstrap.
 
 // Start with assigning color names to specific hex values.
-$brand-color-main:  #fff !default;
+$brand-color-main:  #54d154 !default;
 $black:  #000 !default;
 $red:    #d9534f !default;
 $orange: #f0ad4e !default;
@@ -102,6 +102,7 @@ $blue:   #0275d8 !default;
 $teal:   #5bc0de !default;
 $pink:   #ff5b77 !default;
 $purple: #613d7c !default;
+$white:  #ffffff !default;
 
 // Create grayscale
 $gray-dark:                 #292b2c !default;
@@ -109,6 +110,9 @@ $gray:                      #464a4c !default;
 $gray-light:                #636c72 !default;
 $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f7f7f9 !default;
+$dark-green:                #207b20 !default;
+$nav-green:                 #2b9b2b !default;
+
 
 // Reassign color vars to semantic color scheme
 $brand-primary:             $blue !default;
@@ -117,6 +121,7 @@ $brand-info:                $teal !default;
 $brand-warning:             $orange !default;
 $brand-danger:              $red !default;
 $brand-inverse:             $gray-dark !default;
+
 
 
 // Options
@@ -161,13 +166,14 @@ $sizes: (
 // Settings for the `<body>` element.
 
 $body-bg:       $brand-color-main !default;
-$body-color:    $gray-dark !default;
+$body-color:    $dark-green !default;
 
 // Links
 //
 // Style anchor elements.
 
-$link-color:            $brand-primary !default;
+$link-color:            $nav-green !default;
+$link-active:           $white !default;
 $link-decoration:       none !default;
 $link-hover-color:      darken($link-color, 15%) !default;
 $link-hover-decoration: underline !default;
@@ -226,7 +232,7 @@ $line-height-sm:         1.5 !default;
 
 $border-width: 1px !default;
 
-$border-radius:          .25rem !default;
+$border-radius:          .60rem !default;
 $border-radius-lg:       .3rem !default;
 $border-radius-sm:       .2rem !default;
 

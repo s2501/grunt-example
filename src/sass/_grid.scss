@@ -27,6 +27,7 @@
 
 @if $enable-grid-classes {
   .row {
+    margin:30px 0;
     @include make-row();
   }
 

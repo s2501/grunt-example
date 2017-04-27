@@ -186,12 +186,29 @@ a {
   text-decoration: $link-decoration;
   background-color: transparent; // Remove the gray background on active links in IE 10.
   -webkit-text-decoration-skip: objects; // Remove gaps in links underline in iOS 8+ and Safari 8+.
+  border: 1px solid $nav-green;
+  background: $link-active;
+
+  &.active {
+    color: $link-active;
+    background: $nav-green;
+  }
+
+  &:first-child {
+    border-radius: 10px 0 0 10px;
+  }
+
+  &:last-child {
+    border-radius: 0 10px 10px 0;
+  }
 
   @include hover {
     color: $link-hover-color;
     text-decoration: $link-hover-decoration;
   }
 }
+
+
 
 // And undo these styles for placeholder links/named anchors (without href)
 // which have not been made explicitly keyboard-focusable (without tabindex).
