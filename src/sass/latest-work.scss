@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+
+body {
+	background: #112233;
+}
+
+.latest-work {
+	width: 100%;
+	font-family: 'Montserrat', sans-serif;
+	background: #54d154;
+	margin: 0;
+	padding: 0;
+}
+
+.heading-wrapper {
+}
+
+.heading {
+	text-align: center;
+	letter-spacing: 4px;
+	color: #207b20;
+	padding-top: 43px;
+	margin-bottom: 13px;
+}
+
+.underscore {
+	height: 2px;
+	width: 46px;
+	background:#207b20;
+	display: block;
+	margin: 0 auto;
+}
+
+.paragraph {
+	text-align: center;
+	color: #2b9b2b;
+	margin: 10px 0;
+	padding-bottom: 50px;
+}
+
+.navigation-wrapper {
+	width: 100%;
+	text-align: center;
+}
+
+.navigation {
+	display: inline-block;
+	margin-bottom: 60px;
+	font-size: 0;
+}
+
+.navigation a {
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	font-size: 15px;
+	border: 0.5px solid #2b9b2b;
+}
+
+.photography-btn {
+	background: #2b9b2b;
+	color: #fff;
+	padding: 10px 20px;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+
+.design-btn {
+	background: #fff;
+	color: #2b9b2b;
+	padding: 10px 20px;
+}
+
+.print-btn {
+	background: #fff;
+	color: #2b9b2b;
+	padding: 10px 20px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+/*Изображенията са в различни размери, както са в main.psd.*/
+/*Width идва от col-2, аз довабих height за да ги изравня*/
+
+.grid-img {
+	height: 160px;
+}
+
+.container {
+	width: 100%;
+}
+
+.img-wrapper {
+	text-align: center;
+	padding: 15px;
+}
+
+.more-work {
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 55px;
+	border: none;
+    outline:none;
+	color: #fff;
+	background: #2b9b2b;
+	padding: 10px 20px;
+	border-radius: 15px;
+}
+
+.more-work:after {
+	content:"\2192 ";
+	padding-left: 5px;
+}
+
+.button {
+	padding: 5px;
+	text-align: center;
+}

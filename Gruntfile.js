@@ -5,12 +5,11 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
 
-
         watch: {
 
-            less: {
-                files: ['src/less/**/*.less'],
-                tasks: ['less:dev']
+            sass: {
+                files: ['src/sass/**/*.scss'],
+                tasks: ['sass:dev']
             },
             processhtml: {
                 files: ['src/**/*.html'],
@@ -26,33 +25,23 @@ module.exports = function (grunt) {
             }
         },
 
-        less: {
+        sass: {
             dev: {
                 options: {
-                    paths: ["src/styles"],
-                    plugins: [
-                        new (require('less-plugin-autoprefix'))({browsers: ["last 2 versions"]})
-                    ],
-                    compress: false,
-                    sourceMap: true,
-                    sourceMapFileInline: true
+                    sourcemap: 'inline',
+                    style: 'expanded'
                 },
-                files: {
-                    'dev/css/styles.css': 'src/less/bootstrap.less'
+                    files: {
+                    'dev/css/bootstrap.css': 'src/sass/bootstrap.scss'      // 'destination': 'source'
                 }
             },
-
             dist: {
                 options: {
-                    paths: ["src/styles"],
-                    plugins: [
-                        new (require('less-plugin-autoprefix'))({browsers: ["last 2 versions"]})
-                    ],
-                    compress: true,
-                    sourceMap: false
+                    sourcemap: 'none',
+                    style: 'compressed'
                 },
-                files: {
-                    'dist/css/styles.css': 'src/less/bootstrap.less'
+                    files: {
+                    'dist/css/bootstrap.css': 'src/sass/bootstrap.scss',       // 'destination': 'source'
                 }
             }
         },
@@ -65,8 +54,8 @@ module.exports = function (grunt) {
                     files: [
                         {
                             expand: true,
-                            cwd: './src',
-                            src: ['*.html', 'pages/*.html'],
+                            cwd: 'src',
+                            src: ['*.html', 'pages/*.html'], //защо от папка пейджес???
                             dest: 'dev/',
                             ext: '.html'
                         }
@@ -83,6 +72,25 @@ module.exports = function (grunt) {
                         }
                     ],
                 }
+        },
+
+        htmlmin: {
+            dist: {
+                options: {
+                    removeComments: true,
+                    collapseWhitespace: true
+                },
+                files: {
+                    'dist/index.html': 'dev/index.html',
+                    // 'dist/contact.html': 'dev/contact.html'
+                }
+            },
+            dev: {
+                files: {
+                    'dev/index.html': 'src/index.html',
+                    // 'dist/contact.html': 'src/contact.html'
+                }
+            }
         },
 
         clean: {
@@ -139,15 +147,19 @@ module.exports = function (grunt) {
     grunt.registerTask('default', [
         'clean:dev',
         'copy:dev',
-        'less:dev',
+        'sass:dev',
         'processhtml:dev',
+        'htmlmin:dev',
         'connect',
         'watch']);
 
     grunt.registerTask('dist', [
         'clean:dist',
         'copy:dist',
-        'less:dist',
+        'sass:dist',
         'processhtml:dist',
+        'htmlmin:dist',
         'connect']);
+
 };
+
